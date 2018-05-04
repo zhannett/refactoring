@@ -1,4 +1,4 @@
-webpackHotUpdate(6,{
+webpackHotUpdate(5,{
 
 /***/ "./pages/contact.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -7,9 +7,8 @@ webpackHotUpdate(6,{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_PageLayout__ = __webpack_require__("./layouts/PageLayout.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_MiniDrawer__ = __webpack_require__("./components/MiniDrawer.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.es.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_Main__ = __webpack_require__("./layouts/Main.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.es.js");
 var _jsxFileName = "/Users/janetkulyk/VisualStudioCode/jk/pages/contact.js";
 
 (function () {
@@ -22,17 +21,16 @@ var _jsxFileName = "/Users/janetkulyk/VisualStudioCode/jk/pages/contact.js";
 
 
 
-
 var _default = function _default() {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__layouts_PageLayout__["a" /* default */], {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__layouts_Main__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 6
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 7
     }
   }, "This is the Contact page"));
 };
@@ -77,4 +75,4 @@ var _default = function _default() {
 /***/ })
 
 })
-//# sourceMappingURL=6.766164ebb72f6a576e2e.hot-update.js.map
+//# sourceMappingURL=5.3360da4d40771b095eae.hot-update.js.map

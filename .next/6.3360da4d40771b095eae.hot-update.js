@@ -1,4 +1,4 @@
-webpackHotUpdate(5,{
+webpackHotUpdate(6,{
 
 /***/ "./pages/contact.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -7,7 +7,7 @@ webpackHotUpdate(5,{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_PageLayout__ = __webpack_require__("./layouts/PageLayout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_Main__ = __webpack_require__("./layouts/Main.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.es.js");
 var _jsxFileName = "/Users/janetkulyk/VisualStudioCode/jk/pages/contact.js";
 
@@ -22,7 +22,7 @@ var _jsxFileName = "/Users/janetkulyk/VisualStudioCode/jk/pages/contact.js";
 
 
 var _default = function _default() {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__layouts_PageLayout__["a" /* default */], {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__layouts_Main__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -75,4 +75,4 @@ var _default = function _default() {
 /***/ })
 
 })
-//# sourceMappingURL=5.1260b27594cee394abaf.hot-update.js.map
+//# sourceMappingURL=6.3360da4d40771b095eae.hot-update.js.map

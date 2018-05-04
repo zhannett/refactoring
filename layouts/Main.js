@@ -170,15 +170,7 @@ class MiniDrawer extends React.Component {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-
-        
           { this.props.children }
-     
-
-
-      <h1>inside Drawer</h1>
-      
-       
           {/* <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography> */}
         </main>
       </div>

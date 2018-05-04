@@ -1,13 +1,12 @@
 import React, {Fragment} from 'react'
-import MiniDrawer from '../components/MiniDrawer'
-// import Layout from '../layouts/PageLayout'
+import Main from '../layouts/Main'
 import classNames from 'classnames';
 import Typography from 'material-ui/Typography';
 import { ServerStyleSheet, injectGlobal } from "styled-components";
 
 // export default () => <div>Welcome to next.js!</div>
 const IndexPage = () => (
-<MiniDrawer>
+<Main>
          <Fragment>
         <h1>Hello 🌎!</h1>
         <div class="main_section">
@@ -63,7 +62,7 @@ const IndexPage = () => (
         </div>
         </div>
     </Fragment>
- </MiniDrawer>
+ </Main>
 )
 
 export default IndexPage

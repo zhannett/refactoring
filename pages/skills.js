@@ -1,10 +1,9 @@
 import React from 'react'
-import Layout from '../layouts/PageLayout'
-import MiniDrawer from '../components/MiniDrawer'
+import Main from '../layouts/Main'
 import { ServerStyleSheet, injectGlobal } from "styled-components";
 
 export default () => (
-    <MiniDrawer>
+    <Main>
         <div>
        <p>This is the Skills page</p>
        <p>This is the Skills page</p>
@@ -25,5 +24,5 @@ export default () => (
        <p>This is the Skills page</p>
        <p>This is the Skills page</p>
        </div>
-    </MiniDrawer>
+    </Main>
 )
