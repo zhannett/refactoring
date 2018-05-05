@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import Head from 'next/head'
+import Footer from '../components/Footer'
 import { withStyles } from 'material-ui/styles';
 import classNames from 'classnames';
 import Drawer from 'material-ui/Drawer';
@@ -17,9 +19,14 @@ import FaceIcon from '@material-ui/icons/Face';
 import CallIcon from '@material-ui/icons/Call';
 import ViewListIcon from '@material-ui/icons/ViewList';
 import Link from 'next/link'
-import index from '../pages/index'
-import skills from '../pages/skills'
-import contact from '../pages/contact'
+
+import cyan from 'material-ui/colors/cyan';
+import red from 'material-ui/colors/red';
+
+const primary = cyan[500]; // #00bcd4
+const secondary = red[500]; // #F44336
+const accent1 = cyan[800]; // 
+// const accent2 = purple.A200; // #E040FB (alternative method)
 
 
 const linkStyle = {
@@ -42,7 +49,7 @@ const styles = theme => ({
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
+      duration: theme.transitions.duration.leavingScreen
     }),
   },
   appBarShift: {
@@ -111,10 +118,25 @@ class MiniDrawer extends React.Component {
     const { classes, theme } = this.props;
 
     return (
+    <Fragment>
       <div className={classes.root}>
+
+        <Head>
+          <meta charset="utf-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+          <title>Janet (Zhanna) Kulyk\'s Web Site - Web / Mobile Development Services - Toronto, Canada</title>
+          <meta name="author" content="Janet (Zhanna) Kulyk" />
+          <meta name="keywords" content="Janet (Zhanna) Kulyk, Жанна Кулик, web / mobile developer, HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, performance, UI developer, frontend, web performance, Toronto, Ontario, Canada" />
+          <meta name="description" content="Personal web site of Janet (Zhanna) Kulyk and JK IT Consulting Ltd., web / mobile development, design, front-end engineering" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <title>{ this.props.title }</title>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+        </Head>
+
         <AppBar
           position="absolute"
           className={classNames(classes.appBar, this.state.open && classes.appBarShift)}
+          style={{background: primary}}
         >
           <Toolbar disableGutters={!this.state.open}>
             <IconButton
@@ -130,6 +152,7 @@ class MiniDrawer extends React.Component {
             </Typography>
           </Toolbar>
         </AppBar>
+
         <Drawer
           variant="permanent"
           classes={{
@@ -145,35 +168,37 @@ class MiniDrawer extends React.Component {
           <Divider />
           <List>
                 <Link href="/">
-                    <a style={{ fontSize: 16 }}>
-                        <span style={{position: 'absolute', top: '8px', left: '24px'}}><HomeIcon/></span><span style={{marginLeft: '72px'}}>Home</span>
+                    <a style={{ fontSize: 20, textDecoration: 'none' }}>
+                        <span style={{position: 'absolute', top: '6px', left: '24px', color: accent1}}><HomeIcon/></span><Typography style={{marginLeft: '72px', color: accent1}}>Home</Typography>
                         </a>
                 </Link>
           </List>
           <Divider />
           <List>
             <Link href="/skills">
-                <a style={{ fontSize: 16 }}>
-                    <span style={{position: 'absolute', top: '8px', left: '24px'}}><ViewListIcon /></span><span style={{marginLeft: '72px'}}>Skills</span>
+                <a style={{ fontSize: 20, textDecoration: 'none' }}>
+                    <span style={{position: 'absolute', top: '6px', left: '24px', color: accent1}}><ViewListIcon /></span><Typography style={{marginLeft: '72px', color: accent1}}>Skills</Typography>
                     </a>
               </Link>
             </List>
           <Divider />
           <List>
           <Link href="/contact">
-            <a style={{ fontSize: 16 }}>
-              <span style={{position: 'absolute', top: '8px', left: '24px'}}><CallIcon /></span><span style={{marginLeft: '72px'}}>Contact</span>
+            <a style={{ fontSize: 20, textDecoration: 'none' }}>
+              <span style={{position: 'absolute', top: '6px', left: '24px', color: accent1}}><CallIcon /></span><Typography style={{marginLeft: '72px', color: accent1}}>Contact</Typography>
               </a>
               </Link>
             </List>
           <Divider />
         </Drawer>
-        <main className={classes.content}>
+        <main className={classes.content}  style={{overflow: 'scroll'}}>
           <div className={classes.toolbar} />
           { this.props.children }
           {/* <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography> */}
         </main>
       </div>
+      <Footer />
+      </Fragment>
     );
   }
 }
