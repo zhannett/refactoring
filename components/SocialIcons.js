@@ -1,41 +1,43 @@
 import styled, { ServerStyleSheet, injectGlobal } from "styled-components";
 import media from '../mediaTemplate';
 
+import teal from 'material-ui/colors/teal';
+import red from 'material-ui/colors/red';
+
+const primary = teal[500]; // #009688
+const secondary = red[300]; // #F44336
+const secondary700 = red[700];
+const secondary900 = red[900];
+
+const primaryDark = teal[700];
+const primaryLight = teal[300];
+const secondaryDark = '#ba000d';
+const secondaryLight = '#ff7961';
+
 const StayConnectedWrapper = styled.div`
-    background: rgba(153,153,153,0.5);
+    background: #B2DFDB;
     text-align: center;
-    padding: 0 16px;
-    ${media.tablet`
-        padding: 0 8px;
-    `}
     ul {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        width: 80%;
         position: relative;
         top: -8px;
         list-style: none;
         padding-left: 0;
         margin: 0 auto;
-        li {
-            padding: 0 8px;
-            ${media.tablet`
-            padding: 0 4px;
-            `};
-        }
     }
 `;
 const SocIcon = styled.div`
-    width: 48px;
-    height: 48px;
-    margin-top: 16px;
+    width: 32px;
+    height: 32px;
+    margin-top: 8px;
     fill: hsl(240, 100%, 50%);
-    ${media.phone`
-      width: 40px;
-      height: 40px;
-    `};
+    position: relative;
+    top: 4px;
     &:hover {
-  		fill: red;
+  		fill: #D32F2F;
   		transform: scale(1.5);
   		transition: background-color .5s, transform .5s ease-out;
 	}

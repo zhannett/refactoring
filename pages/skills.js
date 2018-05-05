@@ -2,13 +2,25 @@ import React from 'react'
 import Typography from 'material-ui/Typography';
 import Main from '../layouts/Main'
 import { ServerStyleSheet, injectGlobal } from "styled-components";
+import teal from 'material-ui/colors/teal';
+import red from 'material-ui/colors/red';
+
+const primary = teal[500]; // #009688
+const secondary = red[300]; // #F44336
+const secondary700 = red[700];
+const secondary900 = red[900];
+
+const primaryDark = teal[700];
+const primaryLight = teal[300];
+const secondaryDark = '#ba000d';
+const secondaryLight = '#ff7961';
 
 export default () => (
     <Main>
        			<div className="main_section">
-				<div id="skills" className="main_content" data-behavior="prettyPhotoInit">
+				<div>
 					<h1 className="hidden_seo">Professional Skills</h1>
-					<Typography variant="display3">Computer Skills</Typography>
+					<Typography variant="display3" style={{color: secondary}}>Computer Skills</Typography>
 					<dl>
 						<dt>Operating Systems:</dt>
 						<dd>Mac OS X, Windows XP+</dd>

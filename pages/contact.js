@@ -6,6 +6,18 @@ import { compose, withProps } from 'recompose';
 import styled, { ServerStyleSheet, injectGlobal } from "styled-components";
 import Main from '../layouts/Main'
 import media from'../mediaTemplate'
+import teal from 'material-ui/colors/teal';
+import red from 'material-ui/colors/red';
+
+const primary = teal[500]; // #009688
+const secondary = red[300]; // #F44336
+const secondary700 = red[700];
+const secondary900 = red[900];
+
+const primaryDark = teal[700];
+const primaryLight = teal[300];
+const secondaryDark = '#ba000d';
+const secondaryLight = '#ff7961';
 
 const ContactInfoThumbs = styled.div`
     display: inline-block;
@@ -75,7 +87,7 @@ class Contact extends Component {
           );
         return(
     <Main>
-        <Typography variant="display3">Contact Info</Typography>
+        <Typography variant="display3" style={{color: secondary}}>Contact Info</Typography>
        <ContactWrapper>
             <ul style={{listStyle: 'none', paddingLeft: 0, paddingRight: '24px', minWidth: '35%'}}>
                 <li><WWW/><Typography noWrap='true' style={{display: 'inline'}}><a href="http://www.janetkulyk.com/" class="url">www.janetkulyk.com</a></Typography></li>
@@ -86,6 +98,8 @@ class Contact extends Component {
             </ul>
             <MapComponent isMarkerShown />
             <div className="aside_right">
+
+        
                 <aside>
                     <div className="quot">
                         <blockquote>

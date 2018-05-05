@@ -20,13 +20,20 @@ import CallIcon from '@material-ui/icons/Call';
 import ViewListIcon from '@material-ui/icons/ViewList';
 import Link from 'next/link'
 
-import cyan from 'material-ui/colors/cyan';
+import teal from 'material-ui/colors/teal';
 import red from 'material-ui/colors/red';
 
-const primary = cyan[500]; // #00bcd4
-const secondary = red[500]; // #F44336
-const accent1 = cyan[800]; // 
-// const accent2 = purple.A200; // #E040FB (alternative method)
+const primary = teal[500]; // #009688
+const secondary = red[300];
+const secondary700 = red[700];
+const secondary900 = red[900];
+
+const primaryDark = '#008ba3';
+const primaryLight = '#62efff';
+const secondaryDark = '#ba000d';
+const secondaryLight = '#ff7961';
+
+const accent1 = '#b61827'
 
 
 const linkStyle = {
@@ -118,7 +125,7 @@ class MiniDrawer extends React.Component {
     const { classes, theme } = this.props;
 
     return (
-    <Fragment>
+    <div style={{height: '100%'}}>
       <div className={classes.root}>
 
         <Head>
@@ -126,8 +133,8 @@ class MiniDrawer extends React.Component {
           <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <title>Janet (Zhanna) Kulyk\'s Web Site - Web / Mobile Development Services - Toronto, Canada</title>
           <meta name="author" content="Janet (Zhanna) Kulyk" />
-          <meta name="keywords" content="Janet (Zhanna) Kulyk, Жанна Кулик, web / mobile developer, HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, performance, UI developer, frontend, web performance, Toronto, Ontario, Canada" />
-          <meta name="description" content="Personal web site of Janet (Zhanna) Kulyk and JK IT Consulting Ltd., web / mobile development, design, front-end engineering" />
+          <meta name="keywords" content="Janet (Zhanna) Kulyk, Жанна Кулик, PWA, Progressive Web Applications, React.js, Redux, Material-UI, JavaScript, UI developer, Toronto, Ontario, Canada" />
+          <meta name="description" content="Personal web site of Janet (Zhanna) Kulyk and JK IT Consulting Ltd., web / mobile development" />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <title>{ this.props.title }</title>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
@@ -150,6 +157,8 @@ class MiniDrawer extends React.Component {
             <Typography variant="title" color="inherit" noWrap>
               Janet (Zhanna) Kulyk Personal Website
             </Typography>
+
+            <IconButton>🌎</IconButton>
           </Toolbar>
         </AppBar>
 
@@ -159,6 +168,7 @@ class MiniDrawer extends React.Component {
             paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
           }}
           open={this.state.open}
+          style={{height: '100%'}}
         >
           <div className={classes.toolbar}>
             <IconButton onClick={this.handleDrawerClose}>
@@ -169,7 +179,7 @@ class MiniDrawer extends React.Component {
           <List>
                 <Link href="/">
                     <a style={{ fontSize: 20, textDecoration: 'none' }}>
-                        <span style={{position: 'absolute', top: '6px', left: '24px', color: accent1}}><HomeIcon/></span><Typography style={{marginLeft: '72px', color: accent1}}>Home</Typography>
+                        <span style={{position: 'absolute', top: '6px', left: '24px', color: primary}}><HomeIcon/></span><Typography style={{marginLeft: '72px', color: primary}}>Home</Typography>
                         </a>
                 </Link>
           </List>
@@ -177,7 +187,7 @@ class MiniDrawer extends React.Component {
           <List>
             <Link href="/skills">
                 <a style={{ fontSize: 20, textDecoration: 'none' }}>
-                    <span style={{position: 'absolute', top: '6px', left: '24px', color: accent1}}><ViewListIcon /></span><Typography style={{marginLeft: '72px', color: accent1}}>Skills</Typography>
+                    <span style={{position: 'absolute', top: '6px', left: '24px', color: primary}}><ViewListIcon /></span><Typography style={{marginLeft: '72px', color: primary}}>Skills</Typography>
                     </a>
               </Link>
             </List>
@@ -185,20 +195,20 @@ class MiniDrawer extends React.Component {
           <List>
           <Link href="/contact">
             <a style={{ fontSize: 20, textDecoration: 'none' }}>
-              <span style={{position: 'absolute', top: '6px', left: '24px', color: accent1}}><CallIcon /></span><Typography style={{marginLeft: '72px', color: accent1}}>Contact</Typography>
+              <span style={{position: 'absolute', top: '6px', left: '24px', color: primary}}><CallIcon /></span><Typography style={{marginLeft: '72px', color: primary}}>Contact</Typography>
               </a>
               </Link>
             </List>
           <Divider />
         </Drawer>
-        <main className={classes.content}  style={{overflow: 'scroll'}}>
+        <main className={classes.content}  style={{height: '100%'}}>
           <div className={classes.toolbar} />
           { this.props.children }
           {/* <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography> */}
         </main>
       </div>
       <Footer />
-      </Fragment>
+      </div>
     );
   }
 }
