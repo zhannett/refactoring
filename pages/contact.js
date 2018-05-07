@@ -5,6 +5,7 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-map
 import { compose, withProps } from 'recompose';
 import styled, { ServerStyleSheet, injectGlobal } from "styled-components";
 import Main from '../layouts/Main'
+import ThisSite from '../components/ThisSite'
 import media from'../mediaTemplate'
 import teal from 'material-ui/colors/teal';
 import red from 'material-ui/colors/red';
@@ -86,7 +87,8 @@ class Contact extends Component {
             </GoogleMap>
           );
         return(
-    <Main>
+            <Main style={{height: '100%', overflow: 'scroll', marginBottom: '150px'}}>
+            <div style={{height: '100%', overflow: 'scroll', marginBottom: '150px'}}>
         <Typography variant="display3" style={{color: secondary}}>Contact Info</Typography>
        <ContactWrapper>
             <ul style={{listStyle: 'none', paddingLeft: 0, paddingRight: '24px', minWidth: '35%'}}>
@@ -97,23 +99,10 @@ class Contact extends Component {
                 <li><Skype/><Typography noWrap='true' style={{display: 'inline'}}>Skype: janetkulyk</Typography></li>
             </ul>
             <MapComponent isMarkerShown />
-            <div className="aside_right">
-
-        
-                <aside>
-                    <div className="quot">
-                        <blockquote>
-                            Non progrede est regrede.
-                        </blockquote>
-                    </div>
-                    <div className="quot">
-                        <blockquote>
-                            Not going forward is coming back.
-                        </blockquote>
-                    </div>
-                </aside>
-		</div>
 		</ContactWrapper>
+        <ThisSite/>
+        <div style={{marginBottom: '150px'}} />
+        </div>
     </Main>
 )
     }}

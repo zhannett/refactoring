@@ -155,9 +155,8 @@ class MiniDrawer extends React.Component {
               <MenuIcon />
             </IconButton>
             <Typography variant="title" color="inherit" noWrap>
-              Janet (Zhanna) Kulyk Personal Website
+              Janet (Zhanna) Kulyk  - Web Development Consulting World-Wide
             </Typography>
-
             <IconButton>🌎</IconButton>
           </Toolbar>
         </AppBar>
@@ -180,14 +179,14 @@ class MiniDrawer extends React.Component {
                 <Link href="/">
                     <a style={{ fontSize: 20, textDecoration: 'none' }}>
                         <span style={{position: 'absolute', top: '6px', left: '24px', color: primary}}><HomeIcon/></span><Typography style={{marginLeft: '72px', color: primary}}>Home</Typography>
-                        </a>
+                    </a>
                 </Link>
           </List>
           <Divider />
           <List>
             <Link href="/skills">
                 <a style={{ fontSize: 20, textDecoration: 'none' }}>
-                    <span style={{position: 'absolute', top: '6px', left: '24px', color: primary}}><ViewListIcon /></span><Typography style={{marginLeft: '72px', color: primary}}>Skills</Typography>
+                    <span style={{position: 'absolute', top: '6px', left: '24px', color: primary}}><ViewListIcon/></span><Typography style={{marginLeft: '72px', color: primary}}>Skills</Typography>
                     </a>
               </Link>
             </List>
@@ -195,7 +194,7 @@ class MiniDrawer extends React.Component {
           <List>
           <Link href="/contact">
             <a style={{ fontSize: 20, textDecoration: 'none' }}>
-              <span style={{position: 'absolute', top: '6px', left: '24px', color: primary}}><CallIcon /></span><Typography style={{marginLeft: '72px', color: primary}}>Contact</Typography>
+              <span style={{position: 'absolute', top: '6px', left: '24px', color: primary}}><CallIcon/></span><Typography style={{marginLeft: '72px', color: primary}}>Contact</Typography>
               </a>
               </Link>
             </List>
@@ -204,7 +203,6 @@ class MiniDrawer extends React.Component {
         <main className={classes.content}  style={{height: '100%'}}>
           <div className={classes.toolbar} />
           { this.props.children }
-          {/* <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography> */}
         </main>
       </div>
       <Footer />

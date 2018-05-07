@@ -1,9 +1,12 @@
 import React, {Fragment} from 'react'
 import styled, { ServerStyleSheet, injectGlobal } from "styled-components";
 import classNames from 'classnames';
-import Typography from 'material-ui/Typography';
+import Typography from 'material-ui/Typography'
 import Main from '../layouts/Main'
+import ThisSite from '../components/ThisSite'
+import media from'../mediaTemplate'
 import Asterisk from '../svg/Asterisk'
+import Ampersand from '../svg/Ampersand'
 
 import teal from 'material-ui/colors/teal';
 import red from 'material-ui/colors/red';
@@ -50,18 +53,17 @@ const Promo = styled.div`
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-even;
+    ${media.small`
+      flex-direction: column;
+    `};
     img {
         max-width: 264px;
         padding: 4px;
-        border: 4px solid #ccc;
-        border-radius: 8px;
+        border: 2px solid #ccc;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
         margin-right: 32px;
     }
-`;
-
-const CurrentFocus = styled.div`
-    width: 100%;
-    max-width: 800px;
 `;
 
 const Services = styled.ul`
@@ -90,18 +92,11 @@ const IndexPage = () => (
                         <Typography variant="display2" style={{color: secondary, lineHeight: 1.5}}>Hi!</Typography>
                         <Typography variant="display1" style={{color: primaryDark, lineHeight: 1.5}}>I'm Janet Kulyk.</Typography>
                         <Typography variant="display1" style={{color: primary, lineHeight: 1.5}}>I'm a Front-End Developer.</Typography>
-                        <Typography variant="display1" style={{color: primaryLight, lineHeight: 1.5}}>I build web and hybrid mobile applications.</Typography>
-                        <Typography variant="display1" style={{color: secondaryLight, lineHeight: 1.5}}>I love JavaScript and Responsive Design.</Typography>
+                        <Typography variant="display1" style={{color: primaryLight, lineHeight: 1.5}}>I build web <Ampersand/> hybrid mobile applications.</Typography>
+                        <Typography variant="display1" style={{color: secondaryLight, lineHeight: 1.5}}>I love JavaScript <Ampersand/> Responsive Design.</Typography>
                     </div>
                 </Promo>
-                <div style={{maxWidth: '800px', padding: '16px', border: '2px solid #ccc', borderColor: primary, borderRadius: '8px', textAlign: 'center'}}>
-                <p><Typography variant="title">This site is built using React.js, Next.js, Material-UI, Node.js, Nginx, and Express.</Typography></p>
-
-                    </div>
-                <CurrentFocus>
-        
-                    <p><Typography variant="body2">This web site highlights some of my professional skills, contains reference materials and links, has some fun pages, and serves as a sandbox for playing with new code.</Typography></p>
-                </CurrentFocus>    
+                <ThisSite />
                 <Typography variant="display3" style={{color: secondary}}>Services</Typography>
                 <Services>
                     <li><span><Asterisk/></span><span style={{marginLeft: '8px'}}><Typography variant="subheading" style={{display: 'inline', color: secondary900}}>Web Services: </Typography><Typography style={{display: 'inline'}}>domain registration, web hosting, concept development, content management (maintenance)</Typography></span></li>
